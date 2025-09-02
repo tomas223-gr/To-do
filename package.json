@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+<<<<<<< HEAD
     "build": "vite build",
+=======
+    "build": "tsc -b && vite build",
+>>>>>>> 63c7811e9d6a4d207e9a367d9330b934feb762f6
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -22,6 +26,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+<<<<<<< HEAD
+=======
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+>>>>>>> 63c7811e9d6a4d207e9a367d9330b934feb762f6
     "vite": "^7.1.2"
   }
 }
