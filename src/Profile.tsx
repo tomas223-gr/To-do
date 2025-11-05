@@ -1,3 +1,11 @@
+
+//
+//
+//Se usan unos datos de manera estática para poder ver el funcionamiento de el componente
+//se puede sustituír por un estado global en zustand, pero estamos a la espera del DB y el backend para
+//empezar a hacer peticiones 
+//se subirá al repo para que hagan despliegue,después con el backend hecho haremos fetch para traer datos
+
 import { useState } from "react";
 import {Link} from "react-router-dom"
 type Persona = {
@@ -5,6 +13,7 @@ type Persona = {
   correo: string;
   contraseña: string;
 };
+
 
 export default function Profile() {
   const [darkMode, setDarkMode] = useState(true);

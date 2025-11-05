@@ -1,3 +1,6 @@
+//OPCIONAL: Agregar una sección de descripción, pues en el muckup está para agregar una descripción extra a la tarea
+//Opcional: Agregar una sección para ver mejor la tarea y en la misma esté el botón Editar para cambiar la info
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -120,9 +123,8 @@ export default function Dashboard() {
             Perfil
             </Link>
           </button>
-          <button className="hover:text-white transition">About</button>
-          <button className="hover:text-white transition">Features</button>
-          <button className="hover:text-white transition">Pricing</button>
+          <button className="hover:text-white transition">Logout</button>
+         
         </div>
 
         <div className="flex items-center gap-2">
