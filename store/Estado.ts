@@ -1,5 +1,4 @@
 //
-//
 //Solo se crea el estado del user, pero
 //se deben crear estados para: Tareas, total tareas (un array general para ver cuales estan hechas)
 //Y la misma interface de Tareas se usará para crear una nueva
