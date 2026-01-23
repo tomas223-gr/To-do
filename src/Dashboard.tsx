@@ -8,7 +8,7 @@ const priorityColors: Record<Priority, string> = {
   Low: "bg-green-300",
 };
 
-// ✅ Detecta si la tarea es HOY (para notificación visual)
+// Detecta si la tarea es HOY (para notificación visual)
 const isToday = (date: string) => {
   const d = new Date(date);
   const today = new Date();
@@ -60,7 +60,7 @@ export default function Dashboard() {
     setNewTask({ title: "", date: "", priority: "Low" });
   };
 
-  // ✅ FILTROS DE FECHA
+  //  FILTROS DE FECHA
   const dateFilteredTasks = tasks.filter(task => {
     const taskDate = new Date(task.date);
     const now = new Date();
