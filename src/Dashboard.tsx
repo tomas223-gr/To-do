@@ -1,4 +1,8 @@
+//OPCIONAL: Agregar una sección de descripción, pues en el muckup está para agregar una descripción extra a la tarea
+//Opcional: Agregar una sección para ver mejor la tarea y en la misma esté el botón Editar para cambiar la info
+
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type Priority = "High" | "Medium" | "Low";
 
@@ -8,7 +12,7 @@ const priorityColors: Record<Priority, string> = {
   Low: "bg-green-300",
 };
 
-// Detecta si la tarea es HOY (para notificación visual)
+// ✅ Detecta si la tarea es HOY (para notificación visual)
 const isToday = (date: string) => {
   const d = new Date(date);
   const today = new Date();
@@ -60,7 +64,7 @@ export default function Dashboard() {
     setNewTask({ title: "", date: "", priority: "Low" });
   };
 
-  //  FILTROS DE FECHA
+  // ✅ FILTROS DE FECHA
   const dateFilteredTasks = tasks.filter(task => {
     const taskDate = new Date(task.date);
     const now = new Date();
@@ -113,10 +117,14 @@ export default function Dashboard() {
       <nav className={`mt-6 w-[90%] mx-auto border-b ${darkMode ? "border-gray-600" : "border-gray-300"} pb-3 flex justify-between items-center`}>
         <div className="flex gap-8 text-gray-300 font-medium text-lg">
           <button className="px-4 py-1 bg-gray-700 rounded-md hover:bg-gray-600 transition">Logo</button>
-          <button className="text-purple-300 font-semibold hover:text-white transition">Home</button>
-          <button className="hover:text-white transition">About</button>
-          <button className="hover:text-white transition">Features</button>
-          <button className="hover:text-white transition">Pricing</button>
+
+          <button className="text-purple-300 font-semibold hover:text-white transition">
+            <Link to="/profile">
+            Perfil
+            </Link>
+          </button>
+          <button className="hover:text-white transition">Logout</button>
+         
         </div>
 
         <div className="flex items-center gap-2">
@@ -151,8 +159,9 @@ export default function Dashboard() {
         >
           Ordenar por Prioridad ⚡
         </button>
+      
       </div>
-
+                
       {/* TASK LIST */}
       <div className="mt-14 flex flex-col items-center gap-6">
         {filteredTasks.map(task => (
